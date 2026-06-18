@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma TG ADV</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="app-layout">
+        
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <span>TG ADV</span>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">
+                    <i class="fa-solid fa-robot"></i>
+                    <span>Extração IA</span>
+                </a>
+                
+                <a href="#" class="nav-item" id="navClientes">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Clientes</span>
+                </a>
+                
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-folder-open"></i>
+                    <span>Modelos Jurídicos</span>
+                </a>
+                
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <span>Auditoria</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <p>v1.0 - MVP</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="container">
+                <div class="card-header">
+                    <h2>Cadastro Assistido por IA</h2>
+                    <span class="badge-status">
+                        <i class="fa-solid fa-robot"></i> Llama 3.2 Ativo
+                    </span>
+                </div>
+
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                    </div>
+                    <p>Arraste aqui ou <span class="highlight">selecione o documento</span> (PDF, JPG, PNG)</p>
+                </div>
+
+                <form class="form-cadastro">
+                    <div class="form-row">
+                        <div class="form-group size-70">
+                            <label for="nome">NOME COMPLETO</label>
+                            <div class="input-container">
+                                <input type="text" id="nome" value="DANIEL COELHO DA COSTA">
+                                <span class="ia-indicator">IA</span>
+                            </div>
+                        </div>
+                        <div class="form-group size-30">
+                            <label for="cpf">CPF</label>
+                            <div class="input-container">
+                                <input type="text" id="cpf" value="347.002.117-43">
+                                <span class="ia-indicator">IA</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group size-50">
+                            <label for="rg">DOCUMENTO (RG)</label>
+                            <div class="input-container">
+                                <input type="text" id="rg" value="40.151.623-4">
+                                <span class="ia-indicator">IA</span>
+                            </div>
+                        </div>
+                        <div class="form-group size-50">
+                            <label for="nascimento">DATA DE NASCIMENTO</label>
+                            <div class="input-container">
+                                <input type="text" id="nascimento" value="19/02/1980">
+                                <span class="ia-indicator">IA</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group size-100">
+                            <label for="filiacao">FILIAÇÃO</label>
+                            <div class="input-container">
+                                <input type="text" id="filiacao" value="ROSA COELHO DA COSTA / EDIVALDO DA COSTA">
+                                <span class="ia-indicator">IA</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="action-row">
+                        <button type="submit" class="btn btn-save">
+                            <i class="fa-solid fa-floppy-disk"></i> SALVAR DADOS
+                        </button>
+                        
+                        <div class="select-wrapper">
+                            <select id="modeloJuridico">
+                                <option value="" disabled selected>Selecionar Modelo Jurídico...</option>
+                                <option value="procuracao">Procuração Ad Judicia</option>
+                                <option value="declaracao">Declaração de Hipossuficiência</option>
+                            </select>
+                        </div>
+
+                        <button type="button" class="btn btn-generate" disabled>
+                            GERAR DOC
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
